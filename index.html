@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringside Health</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/2964/2964514.png" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg-purple {
+            background-color: #4D4472;
+        }
+
+        .bg-light-purple {
+            background-color: #D3D0F4;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .max-w-650 {
+            max-width: 650px;
+        }
+
+        .max-w-170 {
+            max-width: 170px;
+        }
+
+        .max-w-100 {
+            max-width: 100px;
+        }
+
+        .max-w-43 {
+            max-width: 43px;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .d-inline-grid {
+            display: inline-grid;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .item-center {
+            align-items: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .py-12 {
+            padding: 12px 0px;
+        }
+
+        .py-9 {
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .py-59 {
+            padding-top: 59px;
+            padding-bottom: 59px;
+        }
+
+        .p-22-34-24 {
+            padding: 22px 34px 24px 34px;
+        }
+
+        .p-20 {
+            padding: 20px;
+        }
+
+        .p-16 {
+            padding: 16px;
+        }
+
+        .pt-10 {
+            padding-top: 10px;
+        }
+
+        .pb-56 {
+            padding-bottom: 56px;
+        }
+
+
+        .pb-24 {
+            padding-bottom: 24px;
+        }
+
+
+        .pl-8 {
+            padding-left: 8px;
+        }
+
+        .-mt-42 {
+            margin-top: -42px;
+        }
+
+        .hero-bg {
+            background-image: url(https://i.postimg.cc/pLKG3jbM/hero-bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .dotted-bg {
+            background-image: url(https://i.postimg.cc/X7svC4pz/dotted-bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .footer-bg {
+            background-image: url(https://i.postimg.cc/fT4zpsLV/footer-bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .button {
+            padding: 10px 17px;
+            border-radius: 45px;
+            font-size: 14px;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-black {
+            color: black;
+        }
+
+        .text-light-purple {
+            color: #7766BF;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        .dotted-border {
+            border: 1px dashed white;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .font-extrabold {
+            font-weight: 900;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .font-normal {
+            font-weight: normal;
+        }
+
+
+        .text-24 {
+            font-size: 24px;
+        }
+
+        .span-para {
+            font-size: 24px;
+            color: #7766BF;
+        }
+
+        .lh-42 {
+            line-height: 42px;
+        }
+
+        .lh-31 {
+            line-height: 31px;
+        }
+
+        .card {
+            align-items: center;
+            display: inline-grid;
+        }
+
+        .service-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .service-point {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        .text-nowrap {
+            white-space: nowrap;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .p-4 {
+            padding: 4px;
+        }
+
+        @media (min-width:651px) {
+            .pl-18 {
+                padding-left: 18px;
+            }
+
+            .max-w-239 {
+                max-width: 239px;
+            }
+
+            .max-w-285 {
+                max-width: 285px;
+            }
+
+
+            .px-40 {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .pt-87 {
+                padding-top: 87px;
+            }
+
+            .hero-title {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 42px;
+                color: white;
+                max-width: 346px;
+            }
+
+            .pb-35 {
+                padding-bottom: 35px;
+            }
+
+            .text-28 {
+                font-size: 28px;
+            }
+
+            .para {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .pt-40 {
+                padding-top: 40px;
+            }
+
+            .pb-16 {
+                padding-bottom: 16px;
+            }
+
+            .pt-32 {
+                padding-top: 32px;
+            }
+
+            .text-16 {
+                font-size: 16px;
+            }
+
+            .pt-48 {
+                padding-top: 48px;
+            }
+
+            .pb-12 {
+                padding-bottom: 12px;
+            }
+
+            .max-w-180 {
+                max-width: 180px;
+            }
+
+            .w-50 {
+                width: 50%;
+            }
+
+            .text-right {
+                text-align: right;
+            }
+
+            .pt-120 {
+                padding-top: 120px;
+            }
+
+            .pt-25 {
+                padding-top: 25px;
+            }
+
+            .-mt-45 {
+                margin-top: -45px;
+            }
+
+            .pb-20 {
+                padding-bottom: 20px;
+            }
+
+            .pt-80 {
+                padding-top: 80px;
+            }
+
+        }
+
+        @media (max-width:651px) {
+            .w-full {
+                width: 100%;
+            }
+
+            .d-grid {
+                display: inline-grid;
+            }
+
+            .h-370 {
+                height: 370px;
+            }
+
+            .px-sm-20 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .pt-sm-30 {
+                padding-top: 30px;
+            }
+
+            .hero-title {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 34px;
+                color: white;
+            }
+
+            .pb-sm-26 {
+                padding-bottom: 26px;
+            }
+
+            .text-sm-24 {
+                font-size: 24px;
+            }
+
+            .para {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .p-sm-26-20-16 {
+                padding: 26px 20px 16px 20px;
+            }
+
+            .py-sm-40 {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .text-sm-20 {
+                font-size: 20px;
+            }
+
+            .lh-sm-34 {
+                line-height: 34px;
+            }
+
+            .pb-sm-20 {
+                padding-bottom: 20px;
+            }
+
+            .span-para {
+                font-size: 20px;
+            }
+
+            .mx-sm-auto {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .text-sm-center {
+                text-align: center;
+            }
+
+            .max-w-285 {
+                max-width: 285px;
+            }
+
+            .pb-sm-0 {
+                padding-bottom: 0;
+            }
+
+            .col-reverse-1 {
+                order: 1;
+            }
+
+            .col-reverse-2 {
+                order: 2;
+            }
+
+            .p-sm-12 {
+                padding: 12px;
+            }
+
+            .pb-sm-8 {
+                padding-bottom: 8px;
+            }
+
+            .pt-sm-20 {
+                padding-top: 20px;
+            }
+
+            .text-sm-14 {
+                font-size: 14px;
+            }
+
+            .pt-24 {
+                padding-top: 24px;
+            }
+
+            .pt-sm-4 {
+                padding-top: 4px;
+            }
+
+            .pb-sm-4 {
+                padding-bottom: 4px;
+            }
+
+            .max-w-300 {
+                max-width: 300px;
+            }
+
+            .pl-sm-8 {
+                padding-left: 8px;
+            }
+
+            .pb-sm-16 {
+                padding-bottom: 16px;
+            }
+
+            .pt-sm-104 {
+                padding-top: 104px;
+            }
+
+            .pt-sm-12 {
+                padding-top: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color: gray;">
+    <table class="mx-auto max-w-650 w-100" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td>
+                    <table cellspacing="0">
+                        <tbody class="bg-purple">
+                            <tr>
+                                <td class="text-center py-9">
+                                    <a href="#logo">
+                                        <img src="https://i.postimg.cc/WpCmsySM/logo.png" alt="logo" class="max-w-100"
+                                            style="height: 42px;">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="hero-bg text-sm-center">
+                                <td class="px-40 px-sm-20 pt-87 pt-sm-30">
+                                    <h2 class="hero-title pb-35 pb-sm-26 text-sm-center">Elevate Your Health with
+                                        Ringside Health</h2>
+                                    <a href="#" class="button bg-purple text-white">Explore Premium Services</a>
+                                    <img src="https://i.postimg.cc/nrH0Y0ch/arrow-img.png" alt="arrow-img"
+                                        class="max-w-43 d-block pt-25 pt-sm-20 pb-sm-20 mx-auto pb-20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-59 py-sm-40 px-40 px-sm-20 pt-80">
+                                    <table>
+                                        <tr>
+                                            <td class="dotted-border text-center p-22-34-24 p-sm-26-20-16">
+                                                <h2
+                                                    class="text-28 text-sm-24 text-white font-normal -mt-42 bg-purple max-w-170 mx-auto">
+                                                    Dear <span
+                                                        class="font-bold text-28 text-sm-24 text-white">Rfayan</span>
+                                                </h2>
+                                                <p class="para text-white">Welcome to Ringside Health, where luxury
+                                                    meets health optimization. As a premier clinic serving the affluent
+                                                    equestrian
+                                                    community, we pride ourselves on offering exclusive services
+                                                    tailored to your unique needs. Our commitment to excellence
+                                                    ensures you receive the highest quality care in an environment of
+                                                    sophistication and comfort.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-light-purple px-40 px-sm-20 py-59 py-sm-40">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="text-center pb-24 pb-sm-20">
+                                <h2 class="font-medium text-28 text-sm-24 lh-42 lh-sm-34 text-black px-40 px-sm-20">Get
+                                    Ringside Ready with
+                                    Ringside's
+                                    Executive Health and Performance Optimization Program</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-white p-16">
+                                <table cellspacing="0">
+                                    <tr class="d-grid">
+                                        <td class="w-full pb-sm-20">
+                                            <img src="https://i.postimg.cc/tTkDF067/horse-riding.png" alt="horse-riding"
+                                                class="w-full max-w-239 object-cover h-370">
+                                        </td>
+                                        <td class="pl-18 w-full text-sm-center">
+                                            <h2 class="lh-31 text-24 text-sm-20 text-black font-bold">Registered <span
+                                                    class="span-para">GLEF Attendees & Partners recieve</span> 20% OFF
+                                            </h2>
+                                            <p class="para text-black pt-10 pb-16 pb-sm-16">Embark on a journey into the
+                                                future
+                                                of healthcare. Enhance your mental, physical, and spiritual wellness -
+                                                today and
+                                                tomorrow - with exclusive, tailored healthcare solutions crafted to
+                                                perfectly fit your individual needs.</p>
+                                            <a href="#" class="button bg-purple text-white">Get Ringside Ready today</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-white px-40 px-sm-20 py-59 py-sm-40">
+                    <table cellspacing="0" cellpadding="0" width="100%">
+                        <tr>
+                            <td class="text-center pb-24 pb-sm-0">
+                                <h2 class="font-medium text-28 text-sm-24">Our Premium <span
+                                        class="span-para font-extrabold">Services</span></h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellspacing="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                <tr class="d-grid w-full">
+                                                    <td class="bg-light-purple card max-w-285  mx-sm-auto">
+                                                        <img src="https://i.postimg.cc/T1JF0r20/number-1.png"
+                                                            alt="number-1" class="max-w-285  mx-sm-auto">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="p-20">
+                                                                    <h2 class="service-title pb-16">Weight Loss Services
+                                                                    </h2>
+                                                                    <table class="pb-24 pb-sm-20" cellspacing="0"
+                                                                        cellpadding="0">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                                    alt="checkmark" width="16">
+                                                                            </td>
+                                                                            <td class="pl-8">
+                                                                                <p class="service-point">Personalized
+                                                                                    weight
+                                                                                    management plans</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                                    alt="checkmark" width="16">
+                                                                            </td>
+                                                                            <td class="pl-8">
+                                                                                <p class="service-point py-12">
+                                                                                    Nutritional
+                                                                                    counseling with expert dietitan</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                                    alt="checkmark" width="16">
+                                                                            </td>
+                                                                            <td class="pl-8">
+                                                                                <p class="service-point">Nutritional
+                                                                                    counseling with
+                                                                                    expert dietitan</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="100%" cellspacing="0">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    class="button text-black border">Get
+                                                                                    Service Now</a>
+                                                                            </td>
+                                                                            <td><img src="https://i.postimg.cc/0QMGv3Tt/rh-icon.png"
+                                                                                    alt="rh-icon" height="41"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="text-sm-center">
+                                                        <img src="https://i.postimg.cc/1XQk1yvv/service-img-1.png"
+                                                            alt="service-img-1" class="max-w-285 ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="transform: translateY(-4px);">
+                                <table cellspacing="0" width="100%">
+                                    <tr class="d-grid w-full">
+                                        <td class="text-sm-center col-reverse-2">
+                                            <img src="https://i.postimg.cc/Dy2yjWVz/service-img-2.png"
+                                                alt="service-img-2" class="max-w-285">
+                                        </td>
+                                        <td class="bg-light-purple col-reverse-1 card max-w-285 mx-sm-auto ">
+                                            <img src="https://i.postimg.cc/v8j2KbZN/number-2.png" alt="number-2"
+                                                class="max-w-285 mx-sm-auto">
+                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td class="p-20">
+                                                        <h2 class="service-title pb-16">On-site services and acute care
+                                                        </h2>
+                                                        <table class="pb-56" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point">Immediate attention for
+                                                                        injuries and
+                                                                        illnesses</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point py-12">On-site diagnostics
+                                                                        and treatment
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point">24/7 availability for
+                                                                        emergencies</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width="100%" cellspacing="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#" class="button text-black border">Get
+                                                                        Service Now</a>
+                                                                </td>
+                                                                <td><img src="https://i.postimg.cc/0QMGv3Tt/rh-icon.png"
+                                                                        alt="rh-icon" height="41"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pb-sm-20" style="transform: translateY(-8px);">
+                                <table cellspacing="0" width="100%">
+                                    <tr class="d-grid w-full">
+                                        <td class="bg-light-purple card max-w-285 mx-sm-auto">
+                                            <img src="https://i.postimg.cc/157FB3R8/number-3.png" alt="number-3"
+                                                class="max-w-285">
+                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td class="p-20">
+                                                        <h2 class="service-title pb-16">Weight Loss Services</h2>
+                                                        <table style="padding-bottom: 33px;" cellspacing="0"
+                                                            cellpadding="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point">Personalized weight
+                                                                        management plans</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point py-12">Nutritional
+                                                                        counseling with expert dietitan</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="https://i.postimg.cc/ThvGYZTP/checkmark.png"
+                                                                        alt="checkmark" width="16">
+                                                                </td>
+                                                                <td class="pl-8">
+                                                                    <p class="service-point">Nutritional counseling with
+                                                                        expert dietitan</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width="100%" cellspacing="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#" class="button text-black border">Get
+                                                                        Service Now</a>
+                                                                </td>
+                                                                <td><img src="https://i.postimg.cc/0QMGv3Tt/rh-icon.png"
+                                                                        alt="rh-icon" height="41"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="text-sm-center">
+                                            <img src="https://i.postimg.cc/yx0mmfMN/service-img-3.png"
+                                                alt="service-img-3" class="max-w-285">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%" cellspacing="0">
+                                    <tr>
+                                        <td class="px-40 px-sm-20 text-center pt-40">
+                                            <a href="#" class="button bg-purple text-white">Explore
+                                                More Services</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-light-purple py-59 py-sm-40 px-40 px-sm-20">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td class="text-center">
+                                <h2 class="font-bold text-28 text-sm-24 lh-42 lh-sm-34 text-center mx-auto pb-16 pb-sm-8"
+                                    style="max-width: 386px;">
+                                    Personalized Peptide Treatments and Therapies</h2>
+                                <p class="para mx-auto" style="max-width: 538px;">Available on an individual basis or at
+                                    discounted rates through our Personalized Care Plans, for more information on
+                                    WADA and FEI compliance, please contact us directly</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pt-32 pt-sm-20">
+                                <table cellspacing="0" width="100%">
+                                    <tr class="d-inline-grid w-100 text-center">
+                                        <td>
+                                            <table cellspacing="0" width="100%">
+                                                <tr class="d-grid">
+                                                    <td>
+                                                        <table cellspacing="0" width="100%" cellpadding="0">
+                                                            <tr>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/PJWQ1tcc/hormone.png"
+                                                                                    alt="hormone" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Hormone Therapies</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/CK1tbLDd/anti.png"
+                                                                                    alt="anti" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Anti-Aging</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <table cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/8PZmMdbB/mental-health.png"
+                                                                                    alt="mental-health" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Cognitive and Mental Health</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/YSKGWjTz/injury.png"
+                                                                                    alt="injury" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Injury and Recovery</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table cellspacing="0" width="100%" cellpadding="0">
+                                                <tr class="d-grid">
+                                                    <td>
+                                                        <table cellspacing="0" width="100%" cellpadding="0">
+                                                            <tr>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/wMCHGRXW/weight-loss.png"
+                                                                                    alt="weight-loss" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Weight Loss & Energy</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0" width="100%">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/3Jh3mmwR/wellness.png"
+                                                                                    alt="wellness" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Sexual Wellness</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <table cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px; width: 50%;">
+                                                                                <img src="https://i.postimg.cc/PrVFTn0j/performance.png"
+                                                                                    alt="performance" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Performance Enhancement</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="p-4"
+                                                                    style="height: 128px; min-width: 136px; width: 50%;">
+                                                                    <table cellspacing="0">
+                                                                        <tr>
+                                                                            <td class="bg-white p-16 p-sm-12 text-center"
+                                                                                style="height: 128px; min-width: 136px;  width: 50%;">
+                                                                                <img src="https://i.postimg.cc/76qNSKj9/immune.png"
+                                                                                    alt="immune" width="48">
+                                                                                <p class="text-16 text-sm-14"
+                                                                                    style="font-weight: 600; line-height: 18px; padding-top: 4px;">
+                                                                                    Immune Boosting</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-40 px-sm-20 text-center pt-48 pt-sm-20"><a href="#"
+                                    class="button bg-purple text-white border">Explore
+                                    More Therapies</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="py-59 py-sm-40 px-40 px-sm-20 bg-white">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td>
+                                <h2 class="text-24 text-sm-20 font-medium text-center pb-24 pb-sm-20">What Sets <span
+                                        class="span-para font-extrabold">Us Apart</span></h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pb-24 pb-sm-20">
+                                <table cellspacing="0" width="100%">
+                                    <tr class="d-grid w-full text-sm-center">
+                                        <td class="pb-sm-20">
+                                            <img src="https://i.postimg.cc/PrVBnWz3/unparalleled-expertise.png"
+                                                alt="unparalleled-expertise" class="w-100 mx-auto max-w-180 max-w-300">
+                                            <p style="font-weight: 600; font-size: 14px;"
+                                                class="pt-10 pb-12 pb-sm-4 pt-sm-4">Unparalleled Expertise</p>
+                                            <a class="text-sm-14" href="" style="color: #7766BF;">Know More <img
+                                                    src="https://i.postimg.cc/y88sFh7s/right-arrow.png"
+                                                    alt="right-arrow" width="15" style="margin-left: 6px;"></a>
+                                        </td>
+                                        <td class="pb-sm-20">
+                                            <img src="https://i.postimg.cc/J0g70GBj/bespoke-care.png"
+                                                alt="unparalleled-expertise" class="w-100 mx-auto max-w-180 max-w-300">
+                                            <p style="font-weight: 600; font-size: 14px;"
+                                                class="pt-10 pb-12 pb-sm-4 pt-sm-4">Bespoke Care</p>
+                                            <a class="text-sm-14" href="" style="color: #7766BF;">Know More <img
+                                                    src="https://i.postimg.cc/y88sFh7s/right-arrow.png"
+                                                    alt="right-arrow" width="15" style="margin-left: 6px;"></a>
+                                        </td>
+                                        <td class="pb-sm-20">
+                                            <img src="https://i.postimg.cc/c49kKfHp/luxurious-environment.png"
+                                                alt="unparalleled-expertise" class="w-100 mx-auto max-w-180 max-w-300">
+                                            <p style="font-weight: 600; font-size: 14px;"
+                                                class="pt-10 pb-12 pb-sm-4 pt-sm-4">luxurious Environment</p>
+                                            <a class="text-sm-14" href="" style="color: #7766BF;">Know More <img
+                                                    src="https://i.postimg.cc/y88sFh7s/right-arrow.png"
+                                                    alt="right-arrow" width="15" style="margin-left: 6px;"></a>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellspacing="0" width="100%">
+                                    <tr class="d-grid w-100">
+                                        <td class="bg-light-purple mx-sm-auto max-w-300 w-50"
+                                            style="padding: 29px 20px;">
+                                            <h2 class="font-medium text-24 text-sm-20">At Ringside Health</h2>
+                                            <p class="para" style="padding-top: 12px; padding-bottom: 28px;">we
+                                                understand the demands of your lifestyle and the importance of
+                                                maintaining peak performance.</p>
+                                            <a href="#" class="button border bg-purple text-white">Get Started Now</a>
+                                        </td>
+                                        <td class="mx-sm-auto max-w-300 w-50">
+                                            <img src="https://i.postimg.cc/nhZdPZz1/girl-with-bottle.png"
+                                                alt="girl-with-bottle" class="w-100">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="dotted-bg py-59 py-sm-40 px-40 px-sm-20 bg-white">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td>
+                                <h2 class="text-24 text-sm-20 font-medium text-center pb-24 pb-sm-20">Clients<span
+                                        class="span-para font-extrabold">Testimonials</span></h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="d-inline-grid">
+                                            <img src="https://i.postimg.cc/MTyB2HzG/john-smith.png" alt="john-smith"
+                                                width="91">
+                                        </td>
+                                        <td class="pl-18 pl-sm-8 pb-16 pb-sm-20">
+                                            <img src="https://i.postimg.cc/4ypR1Cvq/semicolon-img.png"
+                                                alt="semicolon-img" width="20">
+                                            <p class="para"
+                                                style="opacity: 70%; padding-top: 8px; padding-bottom: 10px;">"At
+                                                Ringside Health, we redefine healthcare by placing you at the forefront
+                                                of our personalized approach, ensuring that
+                                                every aspect of your wellness journey is meticulously tailored to meet
+                                                your unique needs and aspirations."</p>
+                                            <p class="font-bold" style="font-size: 16px;">John Smith, <span
+                                                    style="font-size: 14px; opacity: 70%;"
+                                                    class="font-normal">USA</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="d-inline-grid">
+                                            <img src="https://i.postimg.cc/wTpfnRcS/sarah-johnson.png"
+                                                alt="sarah-johnson" width="91">
+                                        </td>
+                                        <td class="pl-18 pl-sm-8">
+                                            <img src="https://i.postimg.cc/4ypR1Cvq/semicolon-img.png"
+                                                alt="semicolon-img" width="20">
+                                            <p class="para"
+                                                style="opacity: 70%; padding-top: 8px; padding-bottom: 10px;">"At
+                                                Ringside Health, we redefine healthcare by placing you at the forefront
+                                                of our personalized approach, ensuring that
+                                                every aspect of your wellness journey is meticulously tailored to meet
+                                                your unique needs and aspirations."</p>
+                                            <p class="font-bold" style="font-size: 16px;">Sarah Johnson, <span
+                                                    style="font-size: 14px; opacity: 70%;"
+                                                    class="font-normal">Canada</span></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center pt-48 pt-sm-30"><a href="#" class="button border text-black">More
+                                    Testimonials</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="px-40 px-sm-20 bg-white">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td class="bg-light-purple" style="padding: 28px; transform: translatey(88px);">
+                                <table cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="text-center pb-20 pb-sm-16">
+                                            <h2 style="max-width: 225px;"
+                                                class="font-bold mx-auto text-24 text-sm-20 lh-31">Ready
+                                                to <span class="font-extrabold text-light-purple">Elevate Your</span>
+                                                Performance</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#"
+                                                class="button border text-white bg-purple">Join Now</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer-bg pb-20 pt-120 pt-sm-104">
+                    <table class="px-40 px-sm-20 pb-sm-20" cellspacing="0" width="100%">
+                        <tr class="d-grid w-full text-sm-center">
+                            <td>
+                                <a href="#logo">
+                                    <img src="https://i.postimg.cc/WpCmsySM/logo.png" alt="logo" class="max-w-100">
+                                </a>
+                                <p class="text-white pt-10" style="font-size:14px; line-height: 21px;">
+                                    Phone(appointments): 561-486-9793</p>
+                                <p class="text-white mx-sm-auto"
+                                    style="font-size: 14px; line-height: 21px; max-width: 243px;">Address:
+                                    14440 Pierson Road, Wellington, Fl 33414</p>
+
+                            </td>
+                            <td class="pt-sm-12" style="text-align: right;">
+                                <table class="-mt-45" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="text-sm-center"><a href="#" class="text-white"
+                                                style="font-size: 14px;">Privacy Policy</a></td>
+                                    </tr>
+                                </table>
+                                <table class="pt-25" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="text-center pt-sm-4"><a href="tel:" class="text-white pl-8"
+                                                style="font-size: 14px;">Contact US</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="-mt-45" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="text-sm-center text-right pt-sm-4">
+                                            <a href="#" class="text-white" style="font-size: 14px;">Terms &
+                                                Conditions</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="pt-25" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="text-center pt-sm-4">
+                                            <a href="#" class="text-white" style="font-size: 14px;">Accessibilty</a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </td>
+                        </tr>
+
+                    </table>
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td style="border-bottom: 1px solid white; opacity: 20%;" class="pt-25"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
